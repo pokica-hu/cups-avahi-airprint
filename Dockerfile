@@ -2,7 +2,7 @@ FROM alpine:latest
 
 # Install the packages we need. Avahi will be included
 #RUN echo -e "https://dl-cdn.alpinelinux.org/alpine/edge/testing\nhttps://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
-RUN	apk -U upgrade && apk add --update cups \
+RUN	apk -U upgrade && apk add --update -repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ cups \
 	cups-libs \
 	cups-pdf \
 	cups-client \
