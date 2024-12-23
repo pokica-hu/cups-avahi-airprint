@@ -1,12 +1,12 @@
 FROM alpine:latest
 
 # Install the packages we need. Avahi will be included
-RUN echo -e "https://dl-cdn.alpinelinux.org/alpine/edge/testing\nhttps://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
-	apk add --update cups \
+#RUN echo -e "https://dl-cdn.alpinelinux.org/alpine/edge/testing\nhttps://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
+RUN	apk -U upgrade && apk add --update cups \
 	cups-libs \
 	cups-pdf \
 	cups-client \
-	cups-filters \
+ 	cups-filters \
 	cups-dev \
 	gutenprint \
 	gutenprint-libs \
