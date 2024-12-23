@@ -1,4 +1,4 @@
-# chuckcharlie/cups-avahi-airprint
+# pokica-hu/cups-avahi-airprint
 
 Fork from [quadportnick/docker-cups-airprint](https://github.com/quadportnick/docker-cups-airprint)
 
