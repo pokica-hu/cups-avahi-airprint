@@ -8,8 +8,12 @@ services:
     restart: always
     network_mode: "host"
     environment:
-      CUPSADMIN: cups
-      CUPSPASSWORD: cups
+      CUPSADMIN: cups       # replace it with your desired username
+      CUPSPASSWORD: cups    # replace it with your desired password
     volumes:
-      - "./services:/services"
-      - "./config:/config"
+      - ./services:/services
+      - ./config:/config
+      - ./logs:/var/logs/cups
+      - /var/run/dbus:/var/run/dbus
+    devices:
+      - /dev/bus:/dev/bus
